@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+  <title>Exercice fonction 6</title>
+
+  <script language="javascript">
+
+    function funcDisplayContent(form1) {
+      var content = this.form1.input.value;
+      this.form1.output.value = content;
+    }    
+
+    function funcOnChange(value) {
+      switch (value) {
+        case "Maroc":
+          this.form2.txt_form2.value = "Rabat";
+          break;
+        case "Espagne":
+          this.form2.txt_form2.value = "Madrid";
+          break;
+        case "Algérie":
+          this.form2.txt_form2.value = "Alger";
+          break;
+      }
+    }
+
+    function funcCopyContentForm1() {
+      var formulaire1 = this.form1.input.value;
+      this.form3.output_form3.value = formulaire1;
+    }
+  </script>
+</head>
+
+<body>
+  <form name="form1">
+    <input type="text" name="input" value=""> <BR>
+    <input type="button" name="bouton" value="Afficher" onClick="funcDisplayContent(form1)"><BR>
+    <input type="text" name="output" value="">
+  </form>
+
+  <form name="form2">
+    <select name="pays" id=country" onchange="funcOnChange(this.value)">
+      <option value="Maroc">Maroc</option>
+      <option value="Espagne">Espagne</option>
+      <option value="Algérie">Algérie</option>
+    </select>
+    <input type="text" name="txt_form2" value=""><BR>
+  </form>
+
+  <form NAME="form3">
+    <p>Formulaire 2 :</p>
+    <input type="button" name="bouton" value="Cliquz pour copier le champ text du formulaire 1 !" onClick="funcCopyContentForm1()">
+    <input type="text2" name="output_form3" value=""><BR>
+  </form>
+  
+</body>

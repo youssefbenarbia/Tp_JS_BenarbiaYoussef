@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+  <title>Exercice 10 fonction changement d'image</title>
+
+  <script language="javascript">
+
+    function changeImage() {
+      var img = document.getElementById("image");
+      img.setAttribute("src", "magrossetete2.jpg");
+    }  
+    
+  </script>
+</head>
+
+<body>
+  
+  <img src="magrossetete.jpg" id="image" width="100" height="100"><br><br>
+
+  <a onmouseover="changeImage('image changée')">Changement d'image</a>
+</body>
+
+</html>
